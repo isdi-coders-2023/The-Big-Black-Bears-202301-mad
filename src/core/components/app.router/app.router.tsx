@@ -6,16 +6,7 @@ export type MenuOption = {
   path: string;
 };
 
-const menuOptions: MenuOption[] = [
-  { label: "Home", path: "/home" },
-  { label: "Characters", path: "/characters" },
-  { label: "Favorites", path: "/favorites" },
-  { label: "Details", path: "/details" },
-  { label: "Add", path: "/add" },
-  { label: "Modify", path: "/modify" },
-  { label: "About", path: "/about" },
-  { label: "Error", path: "/error" },
-];
+
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
