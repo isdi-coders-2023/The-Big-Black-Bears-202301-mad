@@ -6,7 +6,7 @@ describe("Given Header component", () => {
     test("Then it should have the title in the screen", () => {
       render(<Header />);
       const element = screen.getAllByRole("img");
-      const elementCount = 2;
+      const elementCount = 3;
       expect(element.length).toBe(elementCount);
     });
   });
