@@ -1,5 +1,5 @@
 .header {
-  background-color: transparent;
+  background-color: black;
   height: 3rem;
 
   .logos {
@@ -13,10 +13,29 @@
       margin-left: 0.5rem;
     }
     &__logo2 {
+      display: none;
+    }
+
+    &__logo3 {
       width: 25px;
       height: 25px;
       margin-top: 0.6rem;
       margin-right: 0.5rem;
+    }
+
+    @media screen and (min-width: 400px) {
+      .logos-desktop {
+        justify-items: flex-start;
+      }
+      &__logo2 {
+        display: inline-flex;
+        width: 80px;
+        height: 30px;
+        margin-left: 2rem;
+      }
+      &__logo3 {
+        display: none;
+      }
     }
   }
 }
