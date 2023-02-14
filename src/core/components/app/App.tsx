@@ -2,13 +2,18 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Footer from "../footer/footer";
-import { Menu } from "../menu/menu";
+import { Sidebar } from "../menu/menu";
 
 function App() {
   return (
     <div className="App">
       <h2>Jefe de equipo</h2>
-      <Menu></Menu>
+      <div className="AppBurger" id="outer-container">
+        <Sidebar
+          pageWrapId={"page-wrap"}
+          outerContainerId={"outer-container"}
+        />
+      </div>
       <Footer />
     </div>
   );
