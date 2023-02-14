@@ -1,19 +1,42 @@
+import { slide as Menu } from "react-burger-menu";
 import "./menu.scss";
-export function Menu() {
+import {
+  BiHomeAlt,
+  BiUser,
+  BiMedal,
+  BiLogInCircle,
+  BiLogOutCircle,
+} from "react-icons/bi";
+
+type SidemenuProps = {
+  pageWrapId: string;
+  outerContainerId: string;
+};
+
+export const Sidebar = ({ pageWrapId, outerContainerId }: SidemenuProps) => {
   return (
-    <ul className="burguermenu__list">
-      <li>
-        <a href="">Home</a>
-      </li>
-      <li>
-        <a href="">About</a>
-      </li>
-      <li>
-        <a href="">Characters</a>
-      </li>
-      <li>
-        <a href="">Favourites</a>
-      </li>
-    </ul>
+    <Menu>
+      <p className="memu-title">Menu</p>
+      <a className="menu-item" href="/">
+        <BiHomeAlt />
+        Home
+      </a>
+      <a className="menu-item" href="/user">
+        <BiUser />
+        User
+      </a>
+      <a className="menu-item" href="/result">
+        <BiMedal />
+        Result
+      </a>
+      <a className="menu-item" href="/login">
+        <BiLogInCircle />
+        Log in
+      </a>
+      <a className="menu-item logout" href="/logout">
+        <BiLogOutCircle />
+        Log out
+      </a>
+    </Menu>
   );
-}
+};
