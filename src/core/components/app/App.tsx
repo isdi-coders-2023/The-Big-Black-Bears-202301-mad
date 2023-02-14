@@ -1,12 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
+import { Header } from "../header/header";
 import "./App.css";
 import Footer from "../footer/footer";
+import { HomePage } from "../../../features/home/page/home";
 
 function App() {
   return (
     <div className="App">
-      <h2>Jefe de equipo</h2>
+      <Header></Header>
+      <HomePage></HomePage>
       <Footer />
     </div>
   );
