@@ -1,3 +1,51 @@
-.burguermenu__list {
-  list-style: none !important;
+.AppBurguer {
+  display: flex;
+  justify-content: right;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+.bm-burger-bars {
+  background: #72778d;
+}
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.bm-cross {
+  background: #bdc3c7;
+}
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.menu-item {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 30px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.menu-item:hover {
+  color: #50a3a2;
 }
