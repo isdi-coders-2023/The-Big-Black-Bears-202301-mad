@@ -1,14 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "../../../features/home/page/home";
+import { MenuOption } from "../app/App";
 
-export type MenuOption = {
-  label: string;
-  path: string;
-};
-
-
-
-type AppRouterProps = {
+export type AppRouterProps = {
   menuOptions: MenuOption[];
 };
 
