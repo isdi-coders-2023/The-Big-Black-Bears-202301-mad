@@ -1,51 +1,40 @@
-.AppBurguer {
-  display: flex;
-  justify-content: right;
+@media (max-width: 401px) {
+  .menu_paths {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-item {
+    text-decoration: none;
+    color: white;
+  }
+  .menu_burger:hover {
+    .menu_paths {
+      padding-top: 3rem;
+      width: 10rem;
+      display: flex;
+      height: 45vh;
+      overflow: auto;
+      background-color: grey;
+      gap: 3rem;
+    }
+  }
 }
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-.bm-burger-bars {
-  background: #72778d;
-}
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-.bm-cross {
-  background: #bdc3c7;
-}
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-.bm-menu {
-  background: white;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-  display: flex;
-  flex-direction: column;
-}
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-.menu-item {
-  font-size: 20px;
-  color: black;
-  margin-bottom: 30px;
-  text-align: left;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.menu-item:hover {
-  color: #50a3a2;
+@media (min-width: 400px) {
+  .logos__logo3 {
+    display: none;
+  }
+  .menu_paths {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+  .menu-item {
+    text-decoration: none;
+    color: white;
+  }
 }
