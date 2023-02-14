@@ -1,5 +1,6 @@
 import "./header.scss";
-export function Header() {
+type HeaderProps = { children: JSX.Element };
+export function Header({ children }: HeaderProps) {
   return (
     <header className="header">
       <div className="logos">
@@ -15,15 +16,8 @@ export function Header() {
             alt="Disney logo"
           />
         </div>
-
-        <div>
-          <img
-            className="logos__logo3"
-            src="../img/burger.png"
-            alt="Burger logo"
-          />
-        </div>
       </div>
+      {children}
     </header>
   );
 }
