@@ -8,9 +8,13 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.28",
+    "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "^18.0.10",
+    "bi": "^0.0.1",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "sass": "^1.58.0",
@@ -43,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/icons-bi": "^1.2.15",
     "@testing-library/dom": "^8.20.0",
     "@testing-library/react": "^13.4.0"
   }
