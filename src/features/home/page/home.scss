@@ -1,0 +1,46 @@
+body {
+  background-image: url(../../../../public/img/homepagebackground.jpg);
+  background-size: cover;
+}
+
+.homepage {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+}
+
+h2 {
+  font-size: xxx-large;
+  color: white;
+  text-align: initial;
+}
+
+.explorebutton {
+  width: 125px;
+  background: rgba(84, 172, 255, 0.824);
+  border-radius: 12px;
+  height: 50px;
+  border-color: transparent;
+  color: white;
+}
+
+@media screen and (min-width: 390px) {
+  body {
+    background: url(../../../../public/img/background-desktop.jpeg);
+    background-size: cover;
+  }
+
+  .homepage {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+  }
+}
