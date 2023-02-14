@@ -1,6 +1,5 @@
 import React from "react";
 import { Header } from "../header/header";
-import "./App.scss";
 import Footer from "../footer/footer";
 import { AppRouter } from "../app.router/app.router";
 
