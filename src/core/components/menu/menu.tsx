@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import "./menu.scss";
-import { MenuOption } from "../app/App";
+import { MenuOption, menuOptions } from "../app/App";
 
 type MenuProps = {
   options: MenuOption[];
 };
 export const Menu = ({ options }: MenuProps) => {
+  const filteredOptions = menuOptions.filter((item, index) => index < 4);
+
   return (
     <>
       <nav className="menu_burger">
@@ -17,7 +19,7 @@ export const Menu = ({ options }: MenuProps) => {
           />
           <div className="menu_paths">
             <ul className="menu-list">
-              {options.map((item) => (
+              {filteredOptions.map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="menu-item">
                     {item.label}
