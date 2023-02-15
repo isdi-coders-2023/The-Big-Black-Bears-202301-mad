@@ -1,7 +1,7 @@
 import React from "react";
-import { Header } from "../header/header";
 import Footer from "../footer/footer";
 import { AppRouter } from "../app.router/app.router";
+import { Header } from "../header/header";
 
 export type MenuOption = {
   label: string;
@@ -21,13 +21,13 @@ export const menuOptions: MenuOption[] = [
 
 function App() {
   return (
-    <div className="App">
-      <div className="page">
+    <>
+      <div className="App">
         <Header></Header>
         <AppRouter menuOptions={menuOptions}></AppRouter>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
 
