@@ -1,5 +1,5 @@
 import "./characters.scss";
-import { Card } from "../card/card";
+import { Card } from "../../../disneychar/characters/components/card/card";
 import { characters } from "../../mocks/characters";
 
 export function Characters() {
