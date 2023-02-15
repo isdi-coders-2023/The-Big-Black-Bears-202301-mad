@@ -5,26 +5,21 @@ type HasId = {
 export type ProtoCharStructure = {
   name: string;
   imageUrl: string;
-  films?: string;
-  shortFilms?: string;
-  tvShows?: string;
-  videoGames?: string;
+  films?: [];
+  shortFilms?: [];
+  tvShows?: [];
+  videoGames?: [];
   isFavorite: boolean;
 };
 
 export type CharStructure = HasId & ProtoCharStructure;
 
-export class ProtoChar implements ProtoCharStructure {
-  public isFavorite: boolean;
-  constructor(
-    public name: string,
-    public imageUrl: string,
-    films: string,
-    shortFilms: string,
-    tvShows?: string,
-    videoGames?: string,
-    isFavorite?: boolean
-  ) {
-    this.isFavorite = false;
-  }
+export interface ProtoChar extends CharStructure {
+  isFavorite: boolean;
+  name: string;
+  imageUrl: string;
+  films: [];
+  shortFilms: [];
+  tvShows: [];
+  videoGames: [];
 }
