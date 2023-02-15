@@ -1,5 +1,5 @@
 import { CharStructure } from "../../models/character";
-import { CharApiPrivateRepo } from "./char.api.repo";
+import { CharApiPrivateRepo } from "./char.api.private.repo";
 
 global.fetch = jest.fn().mockResolvedValue({});
 
