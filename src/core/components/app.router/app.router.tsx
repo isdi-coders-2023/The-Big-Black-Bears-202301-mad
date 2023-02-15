@@ -23,7 +23,7 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         ></Route>
         {/* <Route path={menuOptions[1].path} element={<Characters></Characters>}></Route>
       <Route path={menuOptions[2].path} element={<Favorites></Favorites>}></Route> */}
-        <Route path={menuOptions[3].path} element={<About></About>}></Route>
+        <Route path={menuOptions[1].path} element={<About></About>}></Route>
       </Routes>
     </Suspense>
   );
