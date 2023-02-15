@@ -7,7 +7,6 @@ export type AppRouterProps = {
 };
 
 export function AppRouter({ menuOptions }: AppRouterProps) {
-  console.log("create appRouter");
   return (
     <Routes>
       <Route path={"/"} element={<HomePage></HomePage>}></Route>
