@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {} from "../../../core/components/app.router/app.router";
+import {} from "../../../../core/components/app.router/app.router";
 import "./home.scss";
 
 export default function HomePage() {

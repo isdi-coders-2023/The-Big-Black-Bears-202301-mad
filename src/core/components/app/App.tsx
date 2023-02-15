@@ -12,12 +12,12 @@ export type MenuOption = {
 export const menuOptions: MenuOption[] = [
   { label: "Home", path: "/home" },
   { label: "Characters", path: "/characters" },
-  // { label: "details", path: "/details" },
   { label: "Favorites", path: "/favorites" },
-  // { label: "Add", path: "/add" },
-  // { label: "Edit", path: "/edit" },
   { label: "About", path: "/about" },
-  // { label: "Error", path: "/error" },
+  { label: "details", path: "/details" },
+  { label: "Add", path: "/add" },
+  { label: "Edit", path: "/edit" },
+  { label: "Error", path: "/error" },
 ];
 
 function App() {

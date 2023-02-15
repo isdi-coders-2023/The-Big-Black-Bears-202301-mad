@@ -1,6 +1,6 @@
 .homepage {
   height: 100vh;
-  background-image: url(../../../../public/img/homepagebackground.jpg);
+  background-image: url(../../../../../public/img/homepagebackground.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ h2 {
 
 @media screen and (min-width: 390px) {
   .homepage {
-    background: url(../../../../public/img/background-desktop.jpeg);
+    background: url(../../../../../public/img/background-desktop.jpeg);
     background-size: cover;
     height: 100vh;
 
