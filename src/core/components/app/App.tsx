@@ -1,8 +1,8 @@
 import React from "react";
-import { Header } from "../header/header";
 import Footer from "../footer/footer";
 import { Menu } from "../menu/menu";
 import { AppRouter } from "../app.router/app.router";
+import { Header } from "../header/header";
 
 export type MenuOption = {
   label: string;
