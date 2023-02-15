@@ -13,7 +13,7 @@ export function Header({ children }: HeaderProps) {
           <img
             className="logos__logo2"
             src="../img/disney-logo.png"
-            alt="Disney logo"
+            alt="Disney logo1"
           />
         </div>
       </div>

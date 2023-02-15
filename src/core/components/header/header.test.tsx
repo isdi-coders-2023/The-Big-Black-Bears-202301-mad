@@ -1,17 +1,24 @@
-import { render, screen } from "@testing-library/react";
+/* eslint-disable testing-library/prefer-screen-queries */
+import { render } from "@testing-library/react";
 import { Header } from "./header";
-import { Menu } from "../menu/menu";
 
-describe("Given Header component", () => {
-  describe("When it is render", () => {
-    test("Then it should have the title in the screen", () => {
-      render(
-        <Header>
-          <Menu />
-        </Header>
-      );
-      const element = screen.getByRole("button");
-      expect(element).toBeInTheDocument();
-    });
+describe("Header", () => {
+  it("should render the Disney logos", () => {
+    const { getByAltText } = render(
+      <Header>
+        <></>
+      </Header>
+    );
+    const logo1 = getByAltText("Disney logo");
+    const logo2 = getByAltText("Disney logo1");
+    expect(logo1).toBeInTheDocument();
+    expect(logo2).toBeInTheDocument();
+  });
+
+  it("should render the children", () => {
+    const childElement = <h1>Hello World</h1>;
+    const { getByText } = render(<Header>{childElement}</Header>);
+    const child = getByText("Hello World");
+    expect(child).toBeInTheDocument();
   });
 });

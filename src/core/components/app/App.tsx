@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "../header/header";
 import Footer from "../footer/footer";
-import { HomePage } from "../../../features/home/page/home";
 import { Menu } from "../menu/menu";
 import { AppRouter } from "../app.router/app.router";
 
@@ -13,21 +12,20 @@ export type MenuOption = {
 export const menuOptions: MenuOption[] = [
   { label: "Home", path: "/home" },
   { label: "Characters", path: "/characters" },
-  { label: "details", path: "/details" },
+  // { label: "details", path: "/details" },
   { label: "Favorites", path: "/favorites" },
-  { label: "Add", path: "/add" },
-  { label: "Edit", path: "/edit" },
+  // { label: "Add", path: "/add" },
+  // { label: "Edit", path: "/edit" },
   { label: "About", path: "/about" },
-  { label: "Error", path: "/error" },
+  // { label: "Error", path: "/error" },
 ];
 
 function App() {
   return (
     <div className="App">
       <Header>
-        <Menu></Menu>
+        <Menu options={menuOptions}></Menu>
       </Header>
-      <HomePage></HomePage>
       <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer />
     </div>
