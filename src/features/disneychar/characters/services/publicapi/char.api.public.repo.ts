@@ -1,4 +1,4 @@
-import { CharStructure, ProtoCharStructure } from "../models/character";
+import { CharStructure, ProtoCharStructure } from "../../models/character";
 
 export interface CharApiRepoPublicStructure {
   loadChar(): Promise<CharStructure[]>;
@@ -6,8 +6,7 @@ export interface CharApiRepoPublicStructure {
   update(note: Partial<ProtoCharStructure>): Promise<CharStructure>;
 }
 
-const GET_ALL_CHARACTERS ='https://api.disneyapi.dev/characters';
-
+const GET_ALL_CHARACTERS = "https://api.disneyapi.dev/characters";
 
 export class CharacterApiPublicRepo {
   url: string;
@@ -20,5 +19,4 @@ export class CharacterApiPublicRepo {
     const data = (await resp.json()) as CharStructure[];
     return data;
   }
-
 }
