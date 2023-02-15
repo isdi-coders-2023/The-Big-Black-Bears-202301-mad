@@ -1,6 +1,8 @@
 .header {
-  background-color: transparent;
   height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
 
   .logos {
     display: flex;
