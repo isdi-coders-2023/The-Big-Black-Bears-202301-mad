@@ -2,14 +2,15 @@ import { MemoryRouter as Router } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import { Menu } from "./menu";
 import { MenuOption } from "../app/App";
+import HomePage from "../../../features/disneychar/home/page/home";
 
 describe("Given Menu component", () => {
   describe("When it is rendered", () => {
     test("Then menu should be in the screen", () => {
       const mockOptions: MenuOption[] = [
         {
-          label: "Test",
-          path: "/test",
+          label: "Home",
+          path: "/home",
         },
       ];
       render(

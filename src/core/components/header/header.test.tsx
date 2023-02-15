@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { Header } from "./header";
 
 describe("Header", () => {
-  it("should render the Disney logos", () => {
+  test("should render the Disney logos", () => {
     const { getByAltText } = render(
       <Header>
         <></>
@@ -15,7 +15,7 @@ describe("Header", () => {
     expect(logo2).toBeInTheDocument();
   });
 
-  it("should render the children", () => {
+  test("should render the children", () => {
     const childElement = <h1>Hello World</h1>;
     const { getByText } = render(<Header>{childElement}</Header>);
     const child = getByText("Hello World");
