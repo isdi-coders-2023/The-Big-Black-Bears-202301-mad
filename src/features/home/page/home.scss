@@ -1,11 +1,7 @@
-body {
-  background-image: url(../../../../public/img/homepagebackground.jpg);
-  background-size: cover;
-}
-
 .homepage {
   height: 100vh;
-
+  background-image: url(../../../../public/img/homepagebackground.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,12 +25,9 @@ h2 {
 }
 
 @media screen and (min-width: 390px) {
-  body {
+  .homepage {
     background: url(../../../../public/img/background-desktop.jpeg);
     background-size: cover;
-  }
-
-  .homepage {
     height: 100vh;
 
     display: flex;

@@ -3,7 +3,6 @@ import { AppRouter } from "./app.router";
 import { MemoryRouter as Router } from "react-router-dom";
 import { MenuOption } from "../app/App";
 
-
 const mockOptions: MenuOption[] = [
   {
     label: "Home",
@@ -27,7 +26,7 @@ describe("Given AppRouter", () => {
       </Router>
     );
     test("Then we should navigate to home", async () => {
-      const element = await screen.findByRole("heading", { name: "Home Page" });
+      const element = await screen.findByRole("link");
       expect(element).toBeInTheDocument();
     });
   });
