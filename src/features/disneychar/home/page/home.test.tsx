@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { HomePage } from "./home";
+import HomePage from "./home";
 
 jest.mock("./home");
 describe("Given home component", () => {

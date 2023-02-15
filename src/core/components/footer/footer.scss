@@ -2,5 +2,6 @@ footer {
   background-color: black !important;
   color: white !important;
   padding: 2rem !important;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
