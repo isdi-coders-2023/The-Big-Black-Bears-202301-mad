@@ -8,15 +8,24 @@
     text-decoration: none;
     color: white;
   }
-  .menu_burger:hover {
+  .menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .menu__hover:hover {
     .menu_paths {
       padding-top: 3rem;
       width: 10rem;
-      display: flex;
+      display: block;
       height: 45vh;
       overflow: auto;
       background-color: grey;
       gap: 3rem;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -36,5 +45,12 @@
   .menu-item {
     text-decoration: none;
     color: white;
+    list-style: none;
+  }
+  .menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
   }
 }
