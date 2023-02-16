@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Characters } from "./characters";
+import Characters from "./characters";
 
 describe("Given the characters page", () => {
   describe("When it is render", () => {

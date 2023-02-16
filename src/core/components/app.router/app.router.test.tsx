@@ -14,8 +14,8 @@ const mockOptions: MenuOption[] = [
     path: "/about",
   },
   {
-    label: "2",
-    path: "/2",
+    label: "Characters",
+    path: "/characters",
   },
 ];
 
@@ -39,6 +39,17 @@ describe("Given AppRouter", () => {
         </Router>
       );
       const element = await screen.findByText(/Welcome/i);
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When the route is characters", () => {
+    test("Then we should navigate to characters", async () => {
+      render(
+        <Router initialEntries={["/characters", "/otra"]} initialIndex={0}>
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+      const element = await screen.findByText(/Characters/i);
       expect(element).toBeInTheDocument();
     });
   });

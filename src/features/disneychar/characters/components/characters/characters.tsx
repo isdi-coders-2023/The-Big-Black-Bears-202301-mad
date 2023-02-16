@@ -1,8 +1,8 @@
 import "./characters.scss";
-import { Card } from "../../../disneychar/characters/components/card/card";
+import { Card } from "../card/card";
 import { characters } from "../../mocks/characters";
 
-export function Characters() {
+export default function Characters() {
   return (
     <section className="characters">
       <h2 className="characters__title">Our characters</h2>
