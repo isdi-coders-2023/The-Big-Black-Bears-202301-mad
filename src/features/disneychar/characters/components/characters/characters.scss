@@ -1,0 +1,59 @@
+.characters {
+  background-image: url(../../../../../../public/img/background.jpg);
+  color: white;
+  &__title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: "Playfair Display", serif;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  &__filter {
+    margin-left: 2rem;
+    appearance: none;
+    background-color: white;
+    text-align: center;
+    border-style: 1px solid black;
+    width: 20%;
+    height: 50%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+
+  &__category {
+    font-size: 1.2rem;
+    margin-left: 50px;
+  }
+  &__list {
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 12rem);
+    grid-auto-rows: 300px;
+    grid-gap: 2rem;
+    justify-content: center;
+  }
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-bottom: 20px;
+  }
+  &__prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
+  &__next {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
+}

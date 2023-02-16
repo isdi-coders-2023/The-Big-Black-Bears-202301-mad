@@ -7,20 +7,22 @@ type CardProps = {
 
 export function Card({ character }: CardProps) {
   return (
-    <li className="card">
-      <div>
-        <img src={character.imageUrl} alt="character's icon"></img>
-      </div>
-      <div>
-        <span>{character.name}</span>
-      </div>
-      <button>
+    <div>
+      <li className="card">
         <img
-          className="card__favorite"
-          src="../img/favorite.png"
-          alt="favorite icon"
+          className="card__image"
+          src={character.imageUrl}
+          alt="character's icon"
         ></img>
-      </button>
-    </li>
+        <span>{character.name}</span>
+        <button className="card__button">
+          <img
+            className="card__favorite"
+            src="../img/favorite.png"
+            alt="favorite icon"
+          ></img>
+        </button>
+      </li>
+    </div>
   );
 }
