@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "../../../../../../../Desktop/test/characters"]
+  "include": ["src", "src/features/disneychar/characters/components/characters"]
 }
