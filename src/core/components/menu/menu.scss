@@ -8,24 +8,17 @@
     text-decoration: none;
     color: white;
   }
-  .menu-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-  }
+
   .menu__hover:hover {
     .menu_paths {
-      padding-top: 3rem;
       width: 10rem;
-      display: block;
-      height: 45vh;
-      overflow: auto;
+      display: flex;
+      height: 18vh;
       background-color: grey;
-      gap: 3rem;
-      justify-content: center;
+      gap: 1rem;
+      list-style: none;
       align-items: center;
+      padding-top: 2px;
     }
   }
 }
@@ -46,6 +39,7 @@
     text-decoration: none;
     color: white;
     list-style: none;
+    padding-top: 2rem;
   }
   .menu-list {
     list-style: none;
