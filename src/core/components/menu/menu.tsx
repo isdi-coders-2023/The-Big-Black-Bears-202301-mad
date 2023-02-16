@@ -15,17 +15,16 @@ export const Menu = ({ options }: MenuProps) => {
             src="../img/burger.png"
             alt="Burger logo"
           />
-          <div className="menu_paths">
-            <ul className="menu-list">
-              {options.map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="menu-item">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+
+          <ul className="menu_paths">
+            {options.map((item) => (
+              <li key={item.label}>
+                <Link to={item.path} className="menu-item">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
     </>
