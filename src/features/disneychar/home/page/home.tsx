@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <section className="homepage">
       <h2>Discover the best Disney characters in history.</h2>
-      <Link to={"/home"}>
+      <Link to={"/characters"}>
         <button className="explorebutton" type="button">
           EXPLORE
         </button>
