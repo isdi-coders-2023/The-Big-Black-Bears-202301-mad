@@ -124,7 +124,7 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
   });
 
   describe("When the TestError is rendered and the button is clicked", () => {
-    test("Then, the loadChar function should be catch the error", async () => {
+    test("Then, the loadChar must catch the error and give warn you", async () => {
       const element = await screen.findByTitle("button1");
       // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
