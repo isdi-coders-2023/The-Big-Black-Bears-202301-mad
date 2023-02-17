@@ -4,7 +4,6 @@ import { Menu } from "../menu/menu";
 import { Header } from "../header/header";
 import { AppRouter } from "../app.router/app.router";
 import { CharStructure } from "../../../features/disneychar/characters/models/character";
-import Details from "../../../features/disneychar/characters/components/details/details";
 
 export type MenuOption = {
   label: string;
