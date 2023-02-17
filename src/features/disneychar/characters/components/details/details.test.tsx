@@ -13,9 +13,6 @@ const mockCharacters: CharStructure = {
   tvShows: ["SouthPark"],
   videoGames: ["Game"],
 };
-type mockCardProps = {
-  character: ProtoChar;
-};
 
 describe("Given Details function", () => {
   describe("When details function is rendered", () => {

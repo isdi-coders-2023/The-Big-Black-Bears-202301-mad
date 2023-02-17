@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { MenuOption, mockCharacters, routesOptions } from "../app/App";
+import { MenuOption, mockCharacters } from "../app/App";
 import { Suspense, lazy } from "react";
 
 const About = lazy(
