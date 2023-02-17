@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CharStructure, ProtoChar } from "../../models/character";
+import { CharStructure } from "../../models/character";
 import Details from "./details";
 import { MemoryRouter as Router } from "react-router-dom";
 
