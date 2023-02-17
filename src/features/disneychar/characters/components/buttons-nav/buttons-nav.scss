@@ -1,0 +1,21 @@
+.characters {
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-bottom: 20px;
+  }
+  &__prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
+  &__next {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
+}
