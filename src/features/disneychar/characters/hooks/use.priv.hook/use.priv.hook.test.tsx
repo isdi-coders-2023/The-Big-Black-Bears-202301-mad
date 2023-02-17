@@ -125,7 +125,7 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
   });
 
   describe("When the TestError is rendered and the button is clicked", () => {
-    test("Then, the loadChar must catch the error and give warn you", async () => {
+    test("Then, loadChar must catch an error and give you a warn", async () => {
       const element = await screen.findByTitle("buttonload");
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
@@ -135,7 +135,7 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
-    test("Then, the deleteChar function should be catch the error", async () => {
+    test("Then, deleteChar must catch the error and give you a warning", async () => {
       const element = await screen.findByTitle("buttondelete");
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
