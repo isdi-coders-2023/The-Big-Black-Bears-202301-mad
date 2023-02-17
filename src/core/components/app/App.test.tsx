@@ -10,13 +10,13 @@ describe("Given app component", () => {
   describe("When it is rendered", () => {
     test("then should render a text on the screen", () => {
       render(
-        <App />
+        <>
+          <App />
+        </>
       );
       expect(Header).toHaveBeenCalled();
-      expect(AppRouter).toHaveBeenCalled();
       expect(Footer).toHaveBeenCalled();
       expect(AppRouter).toHaveBeenCalled();
-      expect(Header).toHaveBeenCalled();
     });
   });
 });
