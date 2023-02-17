@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 import { CharStructure } from "../../models/character";
 import { CharApiPrivateRepo } from "../../services/privateapi/char.api.private.repo";
 import { usePrivChar } from "./use.priv.char";
@@ -126,25 +127,21 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
   describe("When the TestError is rendered and the button is clicked", () => {
     test("Then, the loadChar must catch the error and give warn you", async () => {
       const element = await screen.findByTitle("buttonload");
-      // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the addChar function should be catch the error", async () => {
       const element = await screen.findByTitle("buttonadd");
-      // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the deleteChar function should be catch the error", async () => {
       const element = await screen.findByTitle("buttondelete");
-      // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the updateChar function should be catch the error", async () => {
       const element = await screen.findByTitle("buttonupdate");
-      // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
