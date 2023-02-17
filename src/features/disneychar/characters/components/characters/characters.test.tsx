@@ -3,10 +3,10 @@ import Characters from "./characters";
 
 describe("Given the characters page", () => {
   describe("When it is render", () => {
-    test("Then it should return the following text", () => {
+    test("Then it should return the following images", () => {
       render(<Characters></Characters>);
-      const element = screen.getByText("Our characters");
-      expect(element).toBeInTheDocument();
+      const elements = screen.getAllByRole("img");
+      expect(elements[0]).toBeInTheDocument();
     });
   });
 });
