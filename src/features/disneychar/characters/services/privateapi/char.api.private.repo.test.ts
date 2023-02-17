@@ -8,7 +8,7 @@ const mockChar: CharStructure = {
   name: "test",
   imageUrl: "pepe",
   isFavorite: false,
-  films: [],
+  films: [""],
 };
 
 const mockChar1: CharStructure = {
@@ -16,7 +16,7 @@ const mockChar1: CharStructure = {
   name: "test",
   imageUrl: "pepe",
   isFavorite: true,
-  films: [],
+  films: [""],
 };
 
 describe("Given a new private repo", () => {
@@ -48,14 +48,14 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: false,
-          films: [],
+          films: [""],
         }),
       });
       const resp = await repo1.createChar({
         name: "test",
         imageUrl: "pepe",
         isFavorite: false,
-        films: [],
+        films: [""],
       });
       expect(fetch).toHaveBeenCalled();
       expect(resp).toEqual(mockChar);
@@ -67,14 +67,14 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: true,
-          films: [],
+          films: [""],
         }),
       });
       const resp = await repo1.updateChar({
         name: "test",
         imageUrl: "pepe",
         isFavorite: true,
-        films: [],
+        films: [""],
       });
       expect(fetch).toHaveBeenCalled();
       expect(resp).toEqual(mockChar1);
@@ -86,7 +86,7 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: true,
-          films: [],
+          films: [""],
         }),
       });
       const resp = await repo1.deleteChar(1);
