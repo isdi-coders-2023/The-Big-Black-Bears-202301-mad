@@ -1,7 +1,7 @@
 import "./characters.scss";
 import { Card } from "../card/card";
 import { characters } from "../../mocks/characters";
-
+import { Buttons } from "../buttons-nav/buttons-nav";
 export default function Characters() {
   return (
     <section className="characters">
@@ -19,23 +19,7 @@ export default function Characters() {
           <Card key={item.id} character={item}></Card>
         ))}
       </ul>
-      <div className="characters__buttons">
-        <button>
-          <img
-            className="characters__prev"
-            src="../img/prev-button.svg"
-            alt="previous button"
-          ></img>
-        </button>
-
-        <button>
-          <img
-            className="characters__next"
-            src="../img/next-button.svg"
-            alt="next button"
-          ></img>
-        </button>
-      </div>
+      <Buttons></Buttons>
     </section>
   );
 }
