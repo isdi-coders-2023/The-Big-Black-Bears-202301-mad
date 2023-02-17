@@ -1,4 +1,4 @@
-import { CharStructure } from "../characters/models/character";
+import { CharStructure } from "../models/character";
 import { charActions } from "./char.actions";
 
 interface Action {
