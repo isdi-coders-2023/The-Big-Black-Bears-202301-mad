@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { MenuOption } from "../app/App";
+import { MenuOption, mockCharacters } from "../app/App";
 import { Suspense, lazy } from "react";
 
 const About = lazy(
@@ -15,11 +15,17 @@ const Characters = lazy(
     )
 );
 
+const Details = lazy(
+  () =>
+    import("../../../features/disneychar/characters/components/details/details")
+);
+
 export type AppRouterProps = {
   menuOptions: MenuOption[];
+  routesOptions: MenuOption[];
 };
 
-export function AppRouter({ menuOptions }: AppRouterProps) {
+export function AppRouter({ menuOptions, routesOptions }: AppRouterProps) {
   return (
     <Suspense>
       <Routes>
@@ -32,6 +38,10 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         <Route
           path={menuOptions[2].path}
           element={<Characters></Characters>}
+        ></Route>
+        <Route
+          path={routesOptions[0].path}
+          element={<Details character={mockCharacters}></Details>}
         ></Route>
         {/*<Route path={menuOptions[2].path} element={<Favorites></Favorites>}></Route> */}
       </Routes>

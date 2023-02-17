@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CharStructure } from "../../models/character";
 import "./card.scss";
 
@@ -9,11 +10,14 @@ export function Card({ character }: CardProps) {
   return (
     <div>
       <li className="card">
-        <img
-          className="card__image"
-          src={character.imageUrl}
-          alt="character's icon"
-        ></img>
+        <Link to={"/details"}>
+          <img
+            className="card__image"
+            src={character.imageUrl}
+            alt="character's icon"
+          ></img>
+        </Link>
+
         <span>{character.name}</span>
         <button className="card__button">
           <img

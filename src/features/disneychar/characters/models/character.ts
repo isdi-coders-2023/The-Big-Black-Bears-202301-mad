@@ -5,10 +5,10 @@ type HasId = {
 export type ProtoCharStructure = {
   name: string;
   imageUrl: string;
-  films?: [];
-  shortFilms?: [];
-  tvShows?: [];
-  videoGames?: [];
+  films?: [string];
+  shortFilms?: [string];
+  tvShows?: [string];
+  videoGames?: [string];
   isFavorite: boolean;
 };
 
@@ -18,8 +18,8 @@ export interface ProtoChar extends CharStructure {
   isFavorite: boolean;
   name: string;
   imageUrl: string;
-  films: [];
-  shortFilms: [];
-  tvShows: [];
-  videoGames: [];
+  films: [string];
+  shortFilms: [string];
+  tvShows: [string];
+  videoGames: [string];
 }
