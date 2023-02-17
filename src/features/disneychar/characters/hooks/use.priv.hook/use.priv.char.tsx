@@ -38,8 +38,8 @@ export function usePrivChar(repo: CharApiPrivateRepo) {
 
   const deleteChar = async (id: CharStructure["id"]) => {
     try {
-     await repo.deleteChar(id)
-     dispatch(ac.deleteCharCreator(id));
+    await repo.deleteChar(id)
+    dispatch(ac.deleteCharCreator(id));
     } catch (error) {
       handlerError(error as Error);
     }
