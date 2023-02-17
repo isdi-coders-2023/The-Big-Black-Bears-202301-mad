@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { CharacterApiPublicRepo, CharApiRepoPublicStructure } from "../../services/publicapi/char.api.public.repo";
-import { usePrivChar } from "../use.priv.hook/use.priv.char";
+import { CharacterApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
+
 import { usePublicChar } from "./use.public.hook";
 
 const mockRepo1 = {
