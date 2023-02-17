@@ -57,7 +57,7 @@ export class CharApiPrivateRepo {
 
   async deleteChar(id: CharStructure["id"]): Promise<void> {
     const url = this.url + "/" + id;
-    const response = await fetch(url, {
+    await fetch(url, {
       method: "DELETE",
     });
   }

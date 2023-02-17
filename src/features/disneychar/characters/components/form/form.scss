@@ -1,0 +1,74 @@
+.form {
+  background-image: url(../../../../../../public/img/background.jpg);
+  height: 100vh;
+  font-family: "Playfair Display", serif;
+  color: white;
+
+  &__container {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  input {
+    background-color: transparent;
+    border: 0;
+    height: 1.8rem;
+    border-bottom: 1px solid white;
+    justify-self: center;
+    width: 60%;
+  }
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+
+    &__title {
+      color: white;
+      font-size: 1.2rem;
+      font-family: "Playfair Display", serif;
+      padding-bottom: 1.5rem;
+    }
+    &__label {
+      color: white;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    &__checkbox1 {
+      display: flex;
+    }
+
+    &__checkbox2 {
+      display: flex;
+    }
+    &__checkbox3 {
+      display: flex;
+    }
+    &__checkbox4 {
+      display: flex;
+    }
+  }
+
+  ::placeholder {
+    color: white;
+    font-size: 1.2rem;
+  }
+  &__button {
+    background-color: rgb(99, 140, 216);
+    color: white;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    border-style: none;
+  }
+
+  @media screen and (min-width: 390px) {
+    .form {
+      font-size: 1.8rem;
+    }
+  }
+}
