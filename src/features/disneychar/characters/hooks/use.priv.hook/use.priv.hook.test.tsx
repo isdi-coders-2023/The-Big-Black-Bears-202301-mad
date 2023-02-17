@@ -126,23 +126,23 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
 
   describe("When the TestError is rendered and the button is clicked", () => {
     test("Then, loadChar must catch an error and give you a warn", async () => {
-      const element = await screen.findByTitle("buttonload");
-      await act(async () => userEvent.click(element));
+      const element1 = await screen.findByTitle("buttonload");
+      await act(async () => userEvent.click(element1));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the addChar function should be catch the error", async () => {
-      const element = await screen.findByTitle("buttonadd");
-      await act(async () => userEvent.click(element));
+      const element2 = await screen.findByTitle("buttonadd");
+      await act(async () => userEvent.click(element2));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, deleteChar must catch the error and give you a warning", async () => {
-      const element = await screen.findByTitle("buttondelete");
-      await act(async () => userEvent.click(element));
+      const element3 = await screen.findByTitle("buttondelete");
+      await act(async () => userEvent.click(element3));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the updateChar function should be catch the error", async () => {
-      const element = await screen.findByTitle("buttonupdate");
-      await act(async () => userEvent.click(element));
+      const element4 = await screen.findByTitle("buttonupdate");
+      await act(async () => userEvent.click(element4));
       expect(spyLog).toHaveBeenCalled();
     });
   });
