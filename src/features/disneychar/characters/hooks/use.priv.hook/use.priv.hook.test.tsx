@@ -104,16 +104,16 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
         usePrivChar(mockRepoError);
       return (
         <>
-          <button title="button1" onClick={() => loadChar()}>
+          <button title="buttonload" onClick={() => loadChar()}>
             Error
           </button>
-          <button title="button2" onClick={() => addChar(mockChar)}>
+          <button title="buttonadd" onClick={() => addChar(mockChar)}>
             Error
           </button>
-          <button title="button3" onClick={() => deleteChar(1)}>
+          <button title="buttondelete" onClick={() => deleteChar(1)}>
             Error
           </button>
-          <button title="button4" onClick={() => updateChar(mockChar)}>
+          <button title="buttonupdate" onClick={() => updateChar(mockChar)}>
             Error
           </button>
         </>
@@ -125,25 +125,25 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
 
   describe("When the TestError is rendered and the button is clicked", () => {
     test("Then, the loadChar must catch the error and give warn you", async () => {
-      const element = await screen.findByTitle("button1");
+      const element = await screen.findByTitle("buttonload");
       // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the addChar function should be catch the error", async () => {
-      const element = await screen.findByTitle("button2");
+      const element = await screen.findByTitle("buttonadd");
       // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the deleteChar function should be catch the error", async () => {
-      const element = await screen.findByTitle("button3");
+      const element = await screen.findByTitle("buttondelete");
       // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
     test("Then, the updateChar function should be catch the error", async () => {
-      const element = await screen.findByTitle("button4");
+      const element = await screen.findByTitle("buttonupdate");
       // eslint-disable-next-line testing-library/no-unnecessary-act
       await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
