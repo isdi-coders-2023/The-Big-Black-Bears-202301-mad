@@ -1,11 +1,11 @@
-import { CharacterApiPublicRepo } from "./char.api.public.repo";
+import { CharApiPublicRepo } from "./char.api.public.repo";
 
 global.fetch = jest.fn().mockResolvedValue({});
 
 describe("given an new repo", () => {
-  let repo: CharacterApiPublicRepo;
+  let repo: CharApiPublicRepo;
   beforeEach(() => {
-    repo = new CharacterApiPublicRepo();
+    repo = new CharApiPublicRepo();
   });
   describe("when is instanced", () => {
     test("then should load the data from the api", async () => {

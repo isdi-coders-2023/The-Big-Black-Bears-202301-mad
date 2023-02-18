@@ -17,4 +17,3 @@ export function CharsContextProvider({ children }: { children: JSX.Element }) {
     <CharsContext.Provider value={context}>{children}</CharsContext.Provider>
   );
 }
-
