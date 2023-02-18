@@ -1,11 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { render, screen } from "@testing-library/react";
 import { CharsContext } from "./characters.context";
 import { CharsContextProvider } from "./characters.context.provider";
-// import {
-//   CharsContextProvider,
-//   CharsContext,
-// } from "./character.context.provider";
 
 function TestComponent() {
   const context = useContext(CharsContext);
