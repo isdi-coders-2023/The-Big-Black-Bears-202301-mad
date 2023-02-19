@@ -1,11 +1,22 @@
-import { render, screen } from "@testing-library/react";
+/* eslint-disable testing-library/no-unnecessary-act */
+/* eslint-disable testing-library/prefer-screen-queries */
+import {
+  act,
+  fireEvent,
+  getByText,
+  getByTitle,
+  render,
+  screen,
+} from "@testing-library/react";
 import Characters from "./characters";
 import { MemoryRouter as Router } from "react-router-dom";
-import { Buttons } from "../buttons-nav/buttons-nav";
 import { CharsContext } from "../../context/characters.context";
 import { CharsContextProvider } from "../../context/characters.context.provider";
-import { ContextType } from "react";
+import { ContextType, useState } from "react";
 import { CharStructure, ProtoCharStructure } from "../../models/character";
+import userEvent from "@testing-library/user-event";
+import React from "react";
+import { Card } from "../card/card";
 
 const mockRemote = {
   char: [
@@ -17,6 +28,10 @@ const mockRemote = {
       description: "A famous cartoon character",
       category: "Films",
       isFavorite: false,
+      films: [],
+      shortFilms: [],
+      tvShows: [],
+      videoGames: [],
     },
     {
       id: 2,
@@ -25,6 +40,10 @@ const mockRemote = {
       description: "Another beloved Disney character",
       category: "TV Shows",
       isFavorite: false,
+      films: [],
+      shortFilms: [],
+      tvShows: [],
+      videoGames: [],
     },
   ],
   loadPublicChar: jest.fn(),
@@ -51,9 +70,7 @@ describe("Given the characters page", () => {
     // eslint-disable-next-line testing-library/no-render-in-setup
     render(
       <Router>
-        <Characters>
-          <Buttons></Buttons>
-        </Characters>
+        <Characters></Characters>
       </Router>
     );
   });
@@ -65,14 +82,36 @@ describe("Given the characters page", () => {
     });
 
     test("Then it should display a list of characters", async () => {
-  render(
-    <CharsContext.Provider value={value}>
-      <Characters><Buttons></Buttons></Characters>
-    </CharsContext.Provider>
-  );
+      render(
+        <CharsContext.Provider value={value}>
+          <Characters></Characters>
+        </CharsContext.Provider>
+      );
 
-  const listElement = await screen.findAllByRole("list", { name: "" });
-  expect(listElement).toHaveLength(2);
-});
+      const listElement = await screen.findAllByRole("list", { name: "" });
+      expect(listElement).toHaveLength(2);
+    });
+  });
+  describe("When we click a button to navigate to a previous page", () => {
+    test("Then the button should be in the document", () => {
+      const elements = screen.getAllByRole("button");
+      fireEvent.click(elements[0]);
+    });
+  });
+  describe("When we render a card", () => {
+    test("Then it should appear in the document", async () => {
+      act(() => {
+        render(
+          <Router>
+            <Card
+              key={mockRemote.char[0].id}
+              character={mockRemote.char[0]}
+            ></Card>
+          </Router>
+        );
+      });
+      const name = await screen.findByRole("heading", { name: "Mickey Mouse" });
+      expect(name).toBeInTheDocument();
+    });
   });
 });
