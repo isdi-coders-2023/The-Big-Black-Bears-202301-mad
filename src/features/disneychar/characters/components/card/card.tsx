@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-has-required-aria-props */
 import { Link } from "react-router-dom";
 import { CharStructure } from "../../models/character";
 import "./card.scss";
@@ -20,7 +21,7 @@ export function Card({ character }: CardProps) {
           </Link>
         </div>
 
-        <span>{character.name}</span>
+        <span role="heading">{character.name}</span>
         <button className="card__button">
           <img
             className="card__favorite"
