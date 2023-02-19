@@ -1,6 +1,26 @@
 .characters {
   background-image: url(../../../../../../public/img/background.jpg);
   color: white;
+  &__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  &__prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
+  &__next {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: transparent;
+    border-radius: 50%;
+  }
   &__title {
     font-size: 2.5rem;
     font-weight: normal;
