@@ -8,7 +8,7 @@ export type ProtoCharStructure = {
   films: string[];
   shortFilms: string[];
   tvShows: string[];
-  videoGames: [string];
+  videoGames: string[];
   isFavorite: boolean;
   page?: number;
   filterCategory?: string;
