@@ -3,7 +3,6 @@ import { CharStructure } from "../../models/character";
 import { CharApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
 import * as ac from "../../public.reducer/char.public.actions.creators";
 import { charPublicReducer } from "../../public.reducer/char.public.reducer";
-import { charPublicAction } from "../../public.reducer/char.public.actions";
 
 export type usePublicCharStructure = ReturnType<typeof usePublicChar>;
 export function usePublicChar(repo: CharApiPublicRepo) {
@@ -15,14 +14,17 @@ export function usePublicChar(repo: CharApiPublicRepo) {
     console.log(error.message);
   };
 
-  const loadPublicChar = useCallback(async (page: number) => {
-    try {
-      const char = await repo.loadChar(page);
-      dispatch(ac.loadPublicChar(char));
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  }, [repo]);
+  const loadPublicChar = useCallback(
+    async (page: number) => {
+      try {
+        const char = await repo.loadChar(page);
+        dispatch(ac.loadPublicChar(char));
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
 
   return {
     char,
