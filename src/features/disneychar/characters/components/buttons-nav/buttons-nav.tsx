@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CharsContext } from "../../context/characters.context";
 
 export function Buttons() {
-  
+
 
   return (
     <div className="characters__buttons">
