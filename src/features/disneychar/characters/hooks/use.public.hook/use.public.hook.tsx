@@ -2,8 +2,9 @@ import { useCallback, useReducer } from "react";
 import { charReducer } from "../../../reducer/char.reducer";
 import { CharStructure } from "../../models/character";
 import { CharacterApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
-import * as ac from "../../../reducer/char.actions.creators"
+import * as ac from "../../../reducer/char.actions.creators";
 
+export type UsePublicCharsStructure = ReturnType<typeof usePublicChar>;
 export function usePublicChar(repo: CharacterApiPublicRepo) {
   const initialState: CharStructure[] = [];
 
@@ -12,7 +13,6 @@ export function usePublicChar(repo: CharacterApiPublicRepo) {
   const handlerError = (error: Error) => {
     console.log(error.message);
   };
-
 
   const loadPublicChar = useCallback(async () => {
     try {
@@ -26,5 +26,5 @@ export function usePublicChar(repo: CharacterApiPublicRepo) {
   return {
     char,
     loadPublicChar,
-  }
+  };
 }
