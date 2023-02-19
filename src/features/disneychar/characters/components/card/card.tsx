@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-has-required-aria-props */
 import { Link } from "react-router-dom";
 import { CharStructure } from "../../models/character";
 import "./card.scss";
@@ -10,15 +11,17 @@ export function Card({ character }: CardProps) {
   return (
     <div>
       <li className="card">
-        <Link to={"/details"}>
-          <img
-            className="card__image"
-            src={character.imageUrl}
-            alt="character's icon"
-          ></img>
-        </Link>
+        <div className="card__element">
+          <Link to={"/details"}>
+            <img
+              className="card__image"
+              src={character.imageUrl}
+              alt="character's icon"
+            ></img>
+          </Link>
+        </div>
 
-        <span>{character.name}</span>
+        <span role="heading">{character.name}</span>
         <button className="card__button">
           <img
             className="card__favorite"
