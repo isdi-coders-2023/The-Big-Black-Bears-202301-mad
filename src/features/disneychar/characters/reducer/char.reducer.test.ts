@@ -7,7 +7,6 @@ import {
   deleteCharCreator,
 } from "./char.actions.creators";
 
-
 const disneyChar: CharStructure[] = [
   {
     id: 1,
@@ -46,6 +45,10 @@ describe("Given a charReducer function", () => {
         imageUrl:
           "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
         isFavorite: false,
+        films: [],
+        shortFilms: [],
+        tvShows: ["ciao"],
+        videoGames: ["halo"],
       },
     ];
     test("Then it should create this array", () => {
@@ -74,6 +77,10 @@ describe("Given a charReducer function", () => {
         imageUrl:
           "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
         isFavorite: false,
+        films: [],
+        shortFilms: [],
+        tvShows: ["ciao"],
+        videoGames: ["halo"],
       },
     ];
     const mockCharUpdate2 = [
@@ -83,6 +90,10 @@ describe("Given a charReducer function", () => {
         imageUrl:
           "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
         isFavorite: false,
+        films: [],
+        shortFilms: [],
+        tvShows: [],
+        videoGames: [],
       },
     ];
     test("Then it should update this array", () => {
@@ -90,6 +101,35 @@ describe("Given a charReducer function", () => {
         [
           {
             id: 3,
+            name: "",
+            imageUrl:
+              "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
+            isFavorite: false,
+            films: [],
+            shortFilms: [],
+            tvShows: [],
+            videoGames: [],
+          },
+        ],
+        updateCharCreator({
+          id: 3,
+          name: "pepe",
+          imageUrl:
+            "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
+          isFavorite: false,
+          films: [],
+          shortFilms: [],
+          tvShows: [],
+          videoGames: [],
+        })
+      );
+      expect(result3).toEqual(mockCharUpdate2);
+    });
+    test("Then it shouldn't update this array", () => {
+      let result4 = charReducer(
+        [
+          {
+            id: 4,
             name: "pepe",
             imageUrl:
               "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
@@ -101,44 +141,15 @@ describe("Given a charReducer function", () => {
           },
         ],
         updateCharCreator({
-          id: 4,
-          name: "pepe",
+          id: 3,
+          name: "",
           imageUrl:
             "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
           isFavorite: false,
           films: [],
-          shortFilms: [],
-          tvShows: ["ciao"],
-          videoGames: ["halo"],
-        })
-      );
-      expect(result3).toEqual(mockCharUpdate2);
-    });
-    test("Then it shouldn't update this array", () => {
-      let result4 = charReducer(
-        [
-          {
-            id: 4,
-            name: "",
-            imageUrl:
-              "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
-            isFavorite: false,
-            films: [],
-            shortFilms: [],
-            tvShows: ["ciao"],
-            videoGames: ["halo"],
-          },
-        ],
-        updateCharCreator({
-          id: 4,
-          name: "pepe",
-          imageUrl:
-            "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
-          isFavorite: false,
-          films: [],
-          shortFilms: [],
-          tvShows: ["ciao"],
-          videoGames: ["halo"],
+          shortFilms: ["ce"],
+          tvShows: ["cu"],
+          videoGames: [],
         })
       );
       expect(result4).toEqual(mockCharUpdate);
