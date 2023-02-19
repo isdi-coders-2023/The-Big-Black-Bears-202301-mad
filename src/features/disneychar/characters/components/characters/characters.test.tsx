@@ -1,20 +1,12 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 /* eslint-disable testing-library/prefer-screen-queries */
-import {
-  act,
-  fireEvent,
-  getByText,
-  getByTitle,
-  render,
-  screen,
-} from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import Characters from "./characters";
 import { MemoryRouter as Router } from "react-router-dom";
 import { CharsContext } from "../../context/characters.context";
-import { CharsContextProvider } from "../../context/characters.context.provider";
-import { ContextType, useState } from "react";
+
 import { CharStructure, ProtoCharStructure } from "../../models/character";
-import userEvent from "@testing-library/user-event";
+
 import React from "react";
 import { Card } from "../card/card";
 
