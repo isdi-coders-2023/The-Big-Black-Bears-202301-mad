@@ -1,11 +1,12 @@
 import { charReducer } from "./char.reducer";
-import { CharStructure } from "../characters/models/character";
+import { CharStructure } from "../models/character";
 import {
   loadCharCreator,
   createCharCreator,
   updateCharCreator,
   deleteCharCreator,
 } from "./char.actions.creators";
+
 
 const disneyChar: CharStructure[] = [
   {

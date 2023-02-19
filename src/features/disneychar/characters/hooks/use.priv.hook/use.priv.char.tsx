@@ -1,12 +1,10 @@
 import { useCallback, useReducer } from "react";
 import { ProtoCharStructure, CharStructure } from "../../models/character";
 import { CharApiPrivateRepo } from "../../services/privateapi/char.api.private.repo";
-import { charReducer } from "../../../reducer/char.reducer";
-import * as ac from "../../../reducer/char.actions.creators"
+import { charReducer } from "../../reducer/char.reducer";
+import * as ac from "../../reducer/char.actions.creators";
 
-
-
-export type UseCharsStructure = ReturnType<typeof usePrivChar>
+export type UseCharsStructure = ReturnType<typeof usePrivChar>;
 
 export function usePrivChar(repo: CharApiPrivateRepo) {
   const initialState: CharStructure[] = [];
@@ -16,7 +14,6 @@ export function usePrivChar(repo: CharApiPrivateRepo) {
   const handlerError = (error: Error) => {
     console.log(error.message);
   };
-
 
   const loadChar = useCallback(async () => {
     try {
@@ -31,15 +28,15 @@ export function usePrivChar(repo: CharApiPrivateRepo) {
     try {
       const finalChar = await repo.createChar(character);
       dispatch(ac.createCharCreator(finalChar));
-    } catch (error){
+    } catch (error) {
       handlerError(error as Error);
     }
   };
 
   const deleteChar = async (id: CharStructure["id"]) => {
     try {
-    await repo.deleteChar(id)
-    dispatch(ac.deleteCharCreator(id));
+      await repo.deleteChar(id);
+      dispatch(ac.deleteCharCreator(id));
     } catch (error) {
       handlerError(error as Error);
     }

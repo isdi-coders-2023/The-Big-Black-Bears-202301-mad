@@ -1,11 +1,19 @@
 import { useCallback, useReducer } from "react";
-import { charReducer } from "../../../reducer/char.reducer";
+import { charReducer } from "../../reducer/char.reducer";
 import { CharStructure } from "../../models/character";
+<<<<<<< HEAD
 import { CharacterApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
 import * as ac from "../../../reducer/char.actions.creators";
 
 export type UsePublicCharsStructure = ReturnType<typeof usePublicChar>;
 export function usePublicChar(repo: CharacterApiPublicRepo) {
+=======
+import { CharApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
+import * as ac from "../../reducer/char.actions.creators";
+
+export type usePublicCharStructure = ReturnType<typeof usePublicChar>;
+export function usePublicChar(repo: CharApiPublicRepo) {
+>>>>>>> main
   const initialState: CharStructure[] = [];
 
   const [char, dispatch] = useReducer(charReducer, initialState);

@@ -20,14 +20,6 @@ const mockChar: CharStructure = {
   films: ["pepito"],
 };
 
-const mockChar1: CharStructure = {
-  id: 1,
-  name: "test",
-  imageUrl: "pepe",
-  isFavorite: true,
-  films: ["paputo"],
-};
-
 describe("Given a testcomponent", () => {
   beforeEach(() => {
     const TestComponent = function () {

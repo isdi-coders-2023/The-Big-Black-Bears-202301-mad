@@ -1,12 +1,11 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { CharacterApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
-
+import { CharApiPublicRepo } from "../../services/publicapi/char.api.public.repo";
 import { usePublicChar } from "./use.public.hook";
 
 const mockRepo1 = {
   loadChar: jest.fn(),
-} as unknown as CharacterApiPublicRepo;
+} as unknown as CharApiPublicRepo;
 
 const TestComponent = function () {
   const { loadPublicChar } = usePublicChar(mockRepo1);
@@ -48,7 +47,7 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
     const mockRepoError = {
       loadChar: jest.fn().mockRejectedValue(new Error("Test Error")),
 
-    } as unknown as CharacterApiPublicRepo;
+    } as unknown as CharApiPublicRepo;
 
     const TestError = function () {
       const { loadPublicChar } =

@@ -4,15 +4,18 @@ import "./index.css";
 import App from "../src/core/components/app/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import { CharsContextProvider } from "./features/disneychar/characters/context/characters.context.provider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <CharsContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </CharsContextProvider>
   </React.StrictMode>
 );
 
