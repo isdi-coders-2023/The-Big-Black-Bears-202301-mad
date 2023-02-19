@@ -18,6 +18,9 @@ const mockChar: CharStructure = {
   imageUrl: "pepe",
   isFavorite: false,
   films: ["pepito"],
+  shortFilms: ["test"],
+  tvShows: ["ciao"],
+  videoGames: ["halo"],
 };
 
 describe("Given a testcomponent", () => {

@@ -8,7 +8,10 @@ const mockChar: CharStructure = {
   name: "test",
   imageUrl: "pepe",
   isFavorite: false,
-  films: [""],
+  films: [],
+  shortFilms: [],
+  tvShows: ["ciao"],
+  videoGames: ["halo"],
 };
 
 const mockChar1: CharStructure = {
@@ -16,7 +19,10 @@ const mockChar1: CharStructure = {
   name: "test",
   imageUrl: "pepe",
   isFavorite: true,
-  films: [""],
+  films: [],
+  shortFilms: [],
+  tvShows: ["ciao"],
+  videoGames: ["halo"],
 };
 
 describe("Given a new private repo", () => {
@@ -48,14 +54,20 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: false,
-          films: [""],
+          films: [],
+          shortFilms: [],
+          tvShows: ["ciao"],
+          videoGames: ["halo"],
         }),
       });
       const resp = await repo1.createChar({
         name: "test",
         imageUrl: "pepe",
         isFavorite: false,
-        films: [""],
+        films: [],
+        shortFilms: [],
+        tvShows: ["ciao"],
+        videoGames: ["halo"],
       });
       expect(fetch).toHaveBeenCalled();
       expect(resp).toEqual(mockChar);
@@ -67,14 +79,20 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: true,
-          films: [""],
+          films: [],
+          shortFilms: [],
+          tvShows: ["ciao"],
+          videoGames: ["halo"],
         }),
       });
       const resp = await repo1.updateChar({
         name: "test",
         imageUrl: "pepe",
         isFavorite: true,
-        films: [""],
+        films: [],
+        shortFilms: [],
+        tvShows: ["ciao"],
+        videoGames: ["halo"],
       });
       expect(fetch).toHaveBeenCalled();
       expect(resp).toEqual(mockChar1);
@@ -86,7 +104,10 @@ describe("Given a new private repo", () => {
           name: "test",
           imageUrl: "pepe",
           isFavorite: true,
-          films: [""],
+          films: [],
+          shortFilms: [],
+          tvShows: ["ciao"],
+          videoGames: ["halo"],
         }),
       });
       const resp = await repo1.deleteChar(1);

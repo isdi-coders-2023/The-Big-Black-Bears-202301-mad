@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { MenuOption, mockCharacters } from "../app/App";
 import { Suspense, lazy } from "react";
+import { Buttons } from "../../../features/disneychar/characters/components/buttons-nav/buttons-nav";
 
 const About = lazy(
   () => import("../../../features/disneychar/about/page/about")
@@ -37,7 +38,7 @@ export function AppRouter({ menuOptions, routesOptions }: AppRouterProps) {
         <Route path={menuOptions[1].path} element={<About></About>}></Route>
         <Route
           path={menuOptions[2].path}
-          element={<Characters></Characters>}
+          element={<Characters><Buttons /></Characters>}
         ></Route>
         <Route
           path={routesOptions[0].path}

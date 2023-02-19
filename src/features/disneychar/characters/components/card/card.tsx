@@ -10,13 +10,15 @@ export function Card({ character }: CardProps) {
   return (
     <div>
       <li className="card">
-        <Link to={"/details"}>
-          <img
-            className="card__image"
-            src={character.imageUrl}
-            alt="character's icon"
-          ></img>
-        </Link>
+        <div className="card__element">
+          <Link to={"/details"}>
+            <img
+              className="card__image"
+              src={character.imageUrl}
+              alt="character's icon"
+            ></img>
+          </Link>
+        </div>
 
         <span>{character.name}</span>
         <button className="card__button">

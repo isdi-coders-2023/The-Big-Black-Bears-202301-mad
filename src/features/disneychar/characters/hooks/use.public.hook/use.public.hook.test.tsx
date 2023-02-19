@@ -12,7 +12,7 @@ const TestComponent = function () {
 
   return (
     <div className="buttoncontainerpublic">
-      <button title="loadbuttonpublic" onClick={() => loadPublicChar()}>
+      <button title="loadbuttonpublic" onClick={() => loadPublicChar(1)}>
         load
       </button>
     </div>
@@ -54,7 +54,7 @@ describe("Given the usePrivChar Custom Hook and TestError component", () => {
         usePublicChar(mockRepoError);
       return (
         <>
-          <button title="button1" onClick={() => loadPublicChar()}>
+          <button title="button1" onClick={() => loadPublicChar(1)}>
             Error
           </button>
         </>

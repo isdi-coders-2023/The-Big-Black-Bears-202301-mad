@@ -11,7 +11,7 @@ export interface CharPublicAction extends Action {
   payload: CharStructure[];
 }
 
-export const loadPublicCharCreator = (payload: CharStructure[]): CharPublicAction => {
+export const loadPublicChar = (payload: CharStructure[]): CharPublicAction => {
   return {
     type: charPublicAction.load,
     payload,
