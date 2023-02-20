@@ -10,8 +10,6 @@ type CardProps = {
 };
 
 export function Card({ character }: CardProps) {
-  const { remote } = useContext(CharsContext);
-
   return (
     <div>
       <li className="card">
