@@ -25,4 +25,23 @@ describe("given a new repo", () => {
       );
     });
   });
+  describe("when getchar is called", () => {
+    test("then it should get the data from this id", async () => {
+      global.fetch = jest.fn().mockResolvedValue({
+        json: jest.fn().mockResolvedValue({ data: {} }),
+      });
+      const resp = await repo.getChar(1);
+      expect(fetch).toHaveBeenCalled();
+      expect(resp).toEqual([]);
+    });
+
+    test("then it should throw an error with a descriptive message", async () => {
+      global.fetch = jest.fn().mockResolvedValue({
+        json: jest.fn().mockResolvedValue(null),
+      });
+      await expect(repo.getChar(1)).rejects.toThrow(
+        "Failed to get characters from API"
+      );
+    });
+  });
 });
