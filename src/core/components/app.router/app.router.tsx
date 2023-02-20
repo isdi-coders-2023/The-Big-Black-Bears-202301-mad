@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { MenuOption, mockCharacters } from "../app/App";
+import { MenuOption } from "../app/App";
 import { Suspense, lazy } from "react";
 
 const About = lazy(
@@ -41,7 +41,7 @@ export function AppRouter({ menuOptions, routesOptions }: AppRouterProps) {
         ></Route>
         <Route
           path={routesOptions[0].path}
-          element={<Details character={mockCharacters}></Details>}
+          element={<Details></Details>}
         ></Route>
         {/*<Route path={menuOptions[2].path} element={<Favorites></Favorites>}></Route> */}
       </Routes>
