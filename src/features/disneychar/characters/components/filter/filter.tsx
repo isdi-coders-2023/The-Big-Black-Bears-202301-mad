@@ -45,11 +45,16 @@ export function Filter({ characters, setDisplayedCharacters }: FilterProps) {
 
   return (
     <>
-      <span className="characters__category">Category</span>
+      <label htmlFor="category">Category</label>
+      <span className="characters__category" data-testid="category-select">
+        Category
+      </span>
       <select
+        id="category"
         className="characters__filter"
         onChange={handleFilterChange}
         value={selectedCategory}
+        title="catalogue"
       >
         <option value="All">All</option>
         <option value="films">Films</option>
