@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { MenuOption, mockCharacters } from "../app/App";
 import { Suspense, lazy } from "react";
+import ErrorPage from "../../../features/disneychar/error/error";
 
 const About = lazy(
   () => import("../../../features/disneychar/about/page/about")
@@ -43,6 +44,7 @@ export function AppRouter({ menuOptions, routesOptions }: AppRouterProps) {
           path={routesOptions[0].path}
           element={<Details character={mockCharacters}></Details>}
         ></Route>
+        <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
         {/*<Route path={menuOptions[2].path} element={<Favorites></Favorites>}></Route> */}
       </Routes>
     </Suspense>

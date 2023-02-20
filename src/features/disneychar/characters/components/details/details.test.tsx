@@ -19,7 +19,7 @@ describe("Given Details function", () => {
     test("Then it should render the image in the card", () => {
       render(
         <Router>
-          <Details character={mockCharacters} />
+          <Details contextChar={mockCharacters} />
         </Router>
       );
       const imageDetails = screen.getByAltText("Details card image");
