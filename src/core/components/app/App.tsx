@@ -18,19 +18,9 @@ export const menuOptions: MenuOption[] = [
 ];
 
 export const routesOptions: MenuOption[] = [
-  { label: "Details", path: "/details" },
+  { label: "Details", path: "/details/:id" },
 ];
 
-export const mockCharacters: CharStructure = {
-  id: 1,
-  name: "9-Eye",
-  imageUrl: "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
-  isFavorite: false,
-  films: ["Los goonies"],
-  shortFilms: ["El circo de las mariposas"],
-  tvShows: ["SouthPark"],
-  videoGames: ["Game"],
-};
 function App() {
   return (
     <div className="App">
