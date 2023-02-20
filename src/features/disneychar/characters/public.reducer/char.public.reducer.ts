@@ -6,7 +6,10 @@ export function charPublicReducer(
   state: CharStructure[],
   action: CharPublicAction
 ): CharStructure[] {
-  if (action.type === charPublicAction.load) {
+  if (
+    action.type === charPublicAction.load ||
+    action.type === charPublicAction.get
+  ) {
     return action.payload;
   } else {
     return state;
