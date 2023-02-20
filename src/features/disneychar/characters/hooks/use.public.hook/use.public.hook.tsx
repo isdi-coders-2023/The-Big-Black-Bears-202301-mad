@@ -26,8 +26,21 @@ export function usePublicChar(repo: CharApiPublicRepo) {
     [repo]
   );
 
+  const getPublicChar = useCallback(
+    async (id: number) => {
+      try {
+        const char = await repo.getChar(id);
+        dispatch(ac.getPublicChar(char));
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
+
   return {
     char,
     loadPublicChar,
+    getPublicChar,
   };
 }
