@@ -1,5 +1,8 @@
 import { CharStructure } from "../models/character";
-import { loadPublicChar } from "./../public.reducer/char.public.actions.creators";
+import {
+  getPublicChar,
+  loadPublicChar,
+} from "./../public.reducer/char.public.actions.creators";
 import { charPublicReducer } from "./char.public.reducer";
 
 const disneyChar: CharStructure[] = [
@@ -48,6 +51,19 @@ describe("Given the charreducer", () => {
       videoGames: ["halo"],
     },
   ];
+  const mockDefault1: CharStructure[] = [
+    {
+      id: 4,
+      name: "pepe",
+      imageUrl:
+        "https://static.wikia.nocookie.net/disney/images/7/77/9-eye.jpg",
+      isFavorite: false,
+      films: [],
+      shortFilms: [],
+      tvShows: ["ciao"],
+      videoGames: ["halo"],
+    },
+  ];
   const defaultAction = {
     type: "",
     payload: [],
@@ -55,5 +71,9 @@ describe("Given the charreducer", () => {
   test("When the reducer receives default action, then the new state shouldn't change", () => {
     const defaultState = charPublicReducer(mockDefault, defaultAction);
     expect(defaultState).toEqual(mockDefault);
+  });
+  test("When the reducer recives get action it should recive the object", () => {
+    let result = charPublicReducer([], getPublicChar(mockDefault));
+    expect(result).toEqual(mockDefault1);
   });
 });
