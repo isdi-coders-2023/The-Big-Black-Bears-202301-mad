@@ -68,6 +68,8 @@ describe("Given AppRouter", () => {
       const element = await screen.findByText(/Characters/i);
       expect(element).toBeInTheDocument();
     });
+  });
+  describe("When the route is details", () => {
     test("Then we should navigate to details", async () => {
       render(
         <Router initialEntries={["/details", "/otra"]} initialIndex={0}>
