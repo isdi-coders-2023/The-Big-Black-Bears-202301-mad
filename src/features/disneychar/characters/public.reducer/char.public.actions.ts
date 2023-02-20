@@ -1,3 +1,4 @@
 export const charPublicAction = {
-  load: "char@pulicload"
-}
+  load: "char@publicload",
+  get: "char@publicget",
+};
