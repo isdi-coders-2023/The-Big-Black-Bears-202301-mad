@@ -3,7 +3,6 @@ import Footer from "../footer/footer";
 import { Menu } from "../menu/menu";
 import { Header } from "../header/header";
 import { AppRouter } from "../app.router/app.router";
-import { CharStructure } from "../../../features/disneychar/characters/models/character";
 
 export type MenuOption = {
   label: string;
