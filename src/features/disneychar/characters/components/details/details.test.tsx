@@ -1,75 +1,31 @@
-import { render, screen } from "@testing-library/react";
-import { CharStructure } from "../../models/character";
+import { act, render, screen } from "@testing-library/react";
+import { CharsContext } from "../../context/characters.context";
+
 import Details from "./details";
 import { MemoryRouter as Router } from "react-router-dom";
+import { usePublicCharStructure } from "../../hooks/use.public.hook/use.public.hook";
 
-const mockCharacters: CharStructure = {
-  id: 1,
-  name: "Test Character",
-  imageUrl: "https://static.wikia.nocookie.net/disney/images/2/20/ABE.jpg",
-  isFavorite: false,
-  films: ["Los goonies"],
-  shortFilms: ["El circo de las mariposas"],
-  tvShows: ["SouthPark"],
-  videoGames: ["Game"],
-};
+const mockContext = {
+  characterList: [
+    { name: "test", id: 1 },
+    { name: "test", id: 2 },
+  ],
+} as unknown as usePublicCharStructure;
 
-describe("Given Details function", () => {
-  describe("When details function is rendered", () => {
-    test("Then it should render the image in the card", () => {
-      render(
-        <Router>
-          <Details character={mockCharacters} />
-        </Router>
-      );
-      const imageDetails = screen.getByAltText("Details card image");
-      expect(imageDetails).toBeInTheDocument();
-    });
+describe("Given Details page component", () => {
+  describe("When we render the component", () => {
+    test('Then, the heading <h2> "Details" should be in the document', () => {
+      // eslint-disable-next-line testing-library/no-unnecessary-act
 
-    test("Then it should render the name  in the card", () => {
       render(
         <Router>
-          <Details character={mockCharacters} />
+          <Details></Details>
         </Router>
       );
-      const nameDetails = screen.getByText(mockCharacters.name);
-      expect(nameDetails).toBeInTheDocument();
-    });
-    test("Then it should render the films  in the card", () => {
-      render(
-        <Router>
-          <Details character={mockCharacters} />
-        </Router>
-      );
-      const nameDetails = mockCharacters.films;
-      expect(nameDetails).toContain("Los goonies");
-    });
-    test("Then it should render the Short Films  in the card", () => {
-      render(
-        <Router>
-          <Details character={mockCharacters} />
-        </Router>
-      );
-      const nameDetails = mockCharacters.shortFilms;
-      expect(nameDetails).toContain("El circo de las mariposas");
-    });
-    test("Then it should render the TV Shows  in the card", () => {
-      render(
-        <Router>
-          <Details character={mockCharacters} />
-        </Router>
-      );
-      const nameDetails = mockCharacters.tvShows;
-      expect(nameDetails).toContain("SouthPark");
-    });
-    test("Then it should render the Games  in the card", () => {
-      render(
-        <Router>
-          <Details character={mockCharacters} />
-        </Router>
-      );
-      const nameDetails = mockCharacters.videoGames;
-      expect(nameDetails).toContain("Game");
+
+      const element = screen.getByText(/Details/);
+
+      expect(element).toBeInTheDocument();
     });
   });
 });
