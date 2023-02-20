@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CharsContext } from "../../context/characters.context";
 import { CharStructure } from "../../models/character";
 import "./card.scss";
 
@@ -8,11 +10,13 @@ type CardProps = {
 };
 
 export function Card({ character }: CardProps) {
+  const { remote } = useContext(CharsContext);
+
   return (
     <div>
       <li className="card">
         <div className="card__element">
-          <Link to={"/details"}>
+          <Link to={`/details/${character.name}`}>
             <img
               className="card__image"
               src={character.imageUrl}
